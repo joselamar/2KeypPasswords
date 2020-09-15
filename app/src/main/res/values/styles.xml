@@ -1,0 +1,18 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="android:Theme.Material">
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.generatePass">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+        </style>
+
+    <style name="seeEntry" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+</resources>

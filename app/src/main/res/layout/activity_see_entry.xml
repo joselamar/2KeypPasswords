@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".seeEntry"
+    android:theme="@style/seeEntry">
+
+    <ImageView
+        android:id="@+id/keyimage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </Toolbar>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="42dp"
+        android:textSize="20pt"
+        android:text="Entry"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <EditText
+        android:id="@+id/entry"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginRight="16dp"
+        android:hint="Title"
+        android:focusable="false"
+        android:clickable="false"
+        android:longClickable="false"
+        android:selectAllOnFocus="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"/>
+    <EditText
+        android:id="@+id/url"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:focusable="false"
+        android:clickable="false"
+        android:longClickable="false"
+        android:hint="URL"
+        android:selectAllOnFocus="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/entry" />
+    <EditText
+        android:id="@+id/usernameORemail"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        android:clickable="false"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:hint="Username or Email"
+        android:selectAllOnFocus="true"
+        android:longClickable="false"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/url" />
+
+    <EditText
+        android:id="@+id/passwordurl"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:longClickable="false"
+        android:hint="Password"
+        android:inputType="textPassword"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/usernameORemail"
+        app:layout_constraintRight_toLeftOf="@+id/showPass"/>
+
+    <ImageButton
+        android:id="@+id/showPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/usernameORemail"
+        android:src="@drawable/showpassbutton"/>
+
+    <TextView
+        android:id="@+id/passwordgenerator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/password"
+        android:layout_marginLeft="16dp"
+        android:text="Generate password"
+        android:textSize="7pt"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordurl" />
+
+    <EditText
+        android:id="@+id/description"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:focusable="false"
+        android:clickable="false"
+        android:hint="Enter your description"
+        android:inputType="text"
+        android:longClickable="false"
+        android:selectAllOnFocus="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordgenerator"
+        app:layout_constraintRight_toLeftOf="@+id/passwordgenerator"/>
+    <EditText
+        android:id="@+id/date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:longClickable="false"
+        android:clickable="false"
+        android:focusable="false"
+        android:hint="Expiration Date"
+        android:singleLine="true"
+        android:inputType="text"
+        android:selectAllOnFocus="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/choosedateb"
+        app:layout_constraintTop_toBottomOf="@+id/description" />
+    <ImageButton
+        android:id="@+id/choosedateb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:onClick="choosedateEntry"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/description"
+        android:src="@drawable/choosedate"/>
+    <Button
+        android:id="@+id/adder"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:onClick="updateEntry"
+        android:text="Update Entry"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/date" />
+
+</android.support.constraint.ConstraintLayout>
